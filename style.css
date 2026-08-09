@@ -1,0 +1,323 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #f7c8ff,
+        #d8c8ff
+    );
+
+    overflow: hidden;
+    color: #3d2942;
+}
+
+
+/* Background Hearts */
+
+.background span {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 35px;
+
+    animation: float 6s linear infinite;
+}
+
+.background span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.background span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.background span:nth-child(3) {
+    left: 55%;
+    animation-delay: 1s;
+}
+
+.background span:nth-child(4) {
+    left: 75%;
+    animation-delay: 3s;
+}
+
+.background span:nth-child(5) {
+    left: 90%;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes float {
+
+    0% {
+        bottom: -50px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        bottom: 110vh;
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 520px;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* Card */
+
+.card {
+    background: rgba(255, 255, 255, 0.92);
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(90, 40, 80, 0.2);
+
+    animation: appear 0.8s ease;
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Text */
+
+.small-text {
+    color: #b15b91;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #d34f91;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* Gift */
+
+.gift {
+    font-size: 100px;
+    margin: 25px 0;
+
+    cursor: pointer;
+
+    animation: giftBounce 1.5s infinite;
+}
+
+
+@keyframes giftBounce {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(4deg);
+    }
+}
+
+
+/* Button */
+
+button {
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: #e85d9e;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(232, 93, 158, 0.3);
+}
+
+
+button:hover {
+    transform: scale(1.08);
+
+    background: #d94388;
+}
+
+
+/* Birthday */
+
+.birthday-title {
+    color: #e84f94;
+
+    animation: pop 0.8s ease;
+}
+
+
+@keyframes pop {
+
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.cake {
+    font-size: 75px;
+    margin: 10px;
+}
+
+
+.wish {
+    margin-bottom: 25px;
+}
+
+
+/* Secret Message */
+
+.secret {
+    margin-top: 25px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: #fff0f7;
+
+    animation: appear 0.7s ease;
+}
+
+
+.secret h3 {
+    color: #d34f91;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+}
+
+
+.hearts {
+    font-size: 25px;
+    margin: 15px;
+}
+
+
+.ending {
+    color: #d34f91;
+    font-weight: bold;
+}
+
+
+/* Confetti */
+
+.confetti {
+    font-size: 25px;
+    margin-bottom: 10px;
+
+    animation: shake 1s infinite;
+}
+
+
+@keyframes shake {
+
+    0%, 100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+
+/* Hidden */
+
+.hidden {
+    display: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .card {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .gift {
+        font-size: 80px;
+    }
+
+    .cake {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
